@@ -13,6 +13,8 @@ RUN apt-get update \
     python3-pycurl \
     nodejs \
     npm \
+    nano \
+    vim \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
