@@ -14,7 +14,7 @@ config = {
       },
       
       "defaults": {
-        "HOST": "{{ LMS_HOST }}:8000",
+        "HOST": "jupyter.{{ LMS_HOST }}",
         "DOCKER_REGISTRY": "{{ DOCKER_REGISTRY }}",
         "DOCKER_IMAGE": "muratp/jupyter"
         
