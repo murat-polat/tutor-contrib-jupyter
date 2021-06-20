@@ -1,0 +1,7 @@
+pandas
+bokeh
+numpy
+plotly
+dash
+pandas_bokeh
+geopandas
