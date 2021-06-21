@@ -20,7 +20,20 @@
 `tutor local quickstart`
 
 
-### Create Notebook users
+### Create multiple Notebook users (Spawners)
+
+`docker exec -it tutor_local_jupyter_1 bash`
+
+`adduser <username>`
+
+![](/src/addUser.png)
+
+You can create multiple user with same Unix command
+
+
+
+
+
 
 
 
