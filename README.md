@@ -4,6 +4,7 @@
 - Comes with Pandas, Bokeh, Numpy and other popular libraries.
 - Allow to create multiple users, which has own kernel
 
+Please test it before using in production !!
 
 
 ### Installation:
