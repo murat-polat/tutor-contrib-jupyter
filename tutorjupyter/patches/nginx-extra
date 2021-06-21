@@ -16,4 +16,21 @@ server {
     proxy_redirect off;
     proxy_pass http://jupyter-backend;
   }
+
+  location ~* /(api/kernels/[^/]+/(channels|iopub|shell|stdin)|terminals/websocket)/?
+    {
+        access_log /tmp/ng_access.log  main;
+        error_log /tmp/ng_error_log debug;
+        proxy_http_version    1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $server_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Scheme $scheme;
+        proxy_connect_timeout 200ms;
+        proxy_read_timeout 60;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        #keepalive_timeout  120s 120s;
+        proxy_pass http://jupyter-backend;    
+    }
 }

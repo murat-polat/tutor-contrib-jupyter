@@ -1,6 +1,8 @@
 FROM ubuntu
 LABEL maintainer="MP"
 
+USER root
+
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
  && apt-get install -yq --no-install-recommends \
@@ -28,16 +30,14 @@ RUN python3 -m pip install jupyterhub
 RUN python3 -m pip install notebook 
 
 RUN cd /src/jupyterhub/
-#RUN jupyterhub --generate-config
+RUN jupyterhub --generate-config
 
-#COPY jupyterhub_config.py /src/jupyterhub/jupyterhub_config.py
+COPY jupyterhub_config.py /src/jupyterhub/jupyterhub_config.py
 COPY requirements.txt /src/jupyterhub/requirements.txt
 RUN pip3 install -r requirements.txt
 
 
-USER root
-
 
 EXPOSE 8000
 
-CMD ["jupyterhub"]
+CMD ["jupyterhub -f /src/jupyterhub/jupyterhub_config.py"]

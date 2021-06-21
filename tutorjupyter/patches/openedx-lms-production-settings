@@ -1,0 +1,1 @@
+JUPYTER_PUBLIC_URL_ROOT = "{% if ENABLE_HTTPS %}https{% else %}http{% endif %}://{{ JUPYTER_HOST }}"

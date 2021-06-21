@@ -7,8 +7,7 @@ jupyter:
       SETTINGS: ${EDX_PLATFORM_SETTINGS:-tutor.production}
   command: ['jupyterhub']
   ports:
-    - 8000:8000
-    
+    - 8000:8000    
 
 
   restart: unless-stopped
