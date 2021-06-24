@@ -40,7 +40,9 @@ You can create multiple user with same Unix command
 
 
 
+### Open edX Studio integration:
 
+To integrate JupyterHub plugin to the Open edX Studio, please install this XBlock( https://github.com/murat-polat/jupyterhub-xblock )
 
 
 
