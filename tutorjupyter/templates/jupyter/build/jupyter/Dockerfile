@@ -1,7 +1,7 @@
 FROM ubuntu
 LABEL maintainer="MP"
 
-USER root
+#USER root
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
@@ -28,6 +28,7 @@ WORKDIR /src/jupyterhub/
 RUN npm install -g configurable-http-proxy
 RUN python3 -m pip install jupyterhub
 RUN python3 -m pip install notebook 
+RUN pip3 install jupyterlab
 
 RUN cd /src/jupyterhub/
 RUN jupyterhub --generate-config
@@ -35,9 +36,20 @@ RUN jupyterhub --generate-config
 COPY jupyterhub_config.py /src/jupyterhub/jupyterhub_config.py
 COPY requirements.txt /src/jupyterhub/requirements.txt
 RUN pip3 install -r requirements.txt
-
+RUN apt-get update
 
 
 EXPOSE 8000
+## Create user and administrator
+
+RUN useradd -ms  /bin/bash student 
+RUN echo 'student:solo' | chpasswd
+RUN usermod -aG sudo student
+RUN useradd -ms   /bin/bash teacher
+RUN echo 'teacher:soloadmin' | chpasswd
+RUN usermod -aG sudo teacher
+
+#COPY demo.ipynb /home/student/
+
 
 CMD ["jupyterhub -f /src/jupyterhub/jupyterhub_config.py"]

@@ -3,3 +3,7 @@ bokeh
 numpy
 pandas_bokeh
 geopandas
+plotly
+dash
+oauthenticator
+python-dateutil
