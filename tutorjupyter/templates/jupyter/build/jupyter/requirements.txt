@@ -7,3 +7,7 @@ plotly
 dash
 oauthenticator
 python-dateutil
+jupyterlab-geojson
+jupyterlab-fasta
+jupyter-videochat
+jupyter_bokeh

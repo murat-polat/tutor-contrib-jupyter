@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:20.04
 LABEL maintainer="MP"
 
 #USER root
@@ -16,6 +16,8 @@ RUN apt-get update \
     npm \
     nano \
     vim \
+    r-base \
+    r-base-dev \ 
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 

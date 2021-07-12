@@ -35,6 +35,10 @@ Please test it before using in production !!
 You can create multiple user with same Unix command
 
 
+Realtime chat with Jitsi
+
+![](/src/chat_with_lab.png)
+
 
 ![](/src/jupyterhub.gif)
 
