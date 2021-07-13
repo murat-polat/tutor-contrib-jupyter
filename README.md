@@ -35,12 +35,7 @@ Please test it before using in production !!
 You can create multiple user with same Unix command
 
 
-Realtime chat with Jitsi
 
-![](/src/chat_with_lab.png)
-
-
-![](/src/jupyterhub.gif)
 
 
 
@@ -49,4 +44,5 @@ Realtime chat with Jitsi
 To integrate JupyterHub plugin to the Open edX Studio, please install this XBlock( https://github.com/murat-polat/jupyterhub-xblock )
 
 
+ [![](/src/youtube.jpg)](https://www.youtube.com/watch?v=f-tsGIxYq7c)
 
