@@ -1,7 +1,6 @@
 FROM ubuntu:20.04
 LABEL maintainer="MP"
 
-#USER root
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
@@ -15,6 +14,7 @@ RUN apt-get update \
     nodejs \
     npm \
     nano \
+    curl \
     vim \
     r-base \
     r-base-dev \ 
@@ -22,6 +22,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 RUN python3 -m pip install --upgrade setuptools pip wheel
+RUN curl -L https://tljh.jupyter.org/bootstrap.py 
 
 
 RUN mkdir -p /src/jupyterhub/
@@ -34,24 +35,28 @@ RUN pip3 install jupyterlab
 
 RUN cd /src/jupyterhub/
 RUN jupyterhub --generate-config
-
+## All Jupyter eco system configuration : jupyterhub_config.py ##
 COPY jupyterhub_config.py /src/jupyterhub/jupyterhub_config.py
 COPY requirements.txt /src/jupyterhub/requirements.txt
+COPY user_list.txt /src/jupyterhub/user_list.txt
+
+## All packages, extantions must be added requirements.txt file ##
 RUN pip3 install -r requirements.txt
 RUN apt-get update
 
-
 EXPOSE 8000
-## Create user and administrator
 
-RUN useradd -ms  /bin/bash student 
+## Common user ##
+RUN adduser  --gecos ""   student 
 RUN echo 'student:solo' | chpasswd
-RUN usermod -aG sudo student
-RUN useradd -ms   /bin/bash teacher
+## Admin user has Control Panel for user administrations ##
+RUN adduser  --gecos ""  teacher
 RUN echo 'teacher:soloadmin' | chpasswd
 RUN usermod -aG sudo teacher
 
-#COPY demo.ipynb /home/student/
+## User list, pre-created system users ##
+RUN chmod +x user_list.txt
+RUN newusers -r user_list.txt
 
 
 CMD ["jupyterhub -f /src/jupyterhub/jupyterhub_config.py"]

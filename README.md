@@ -4,7 +4,7 @@
 - Comes with Pandas, Bokeh, Numpy and other popular libraries.
 - Allow to create multiple users, which has own kernel
 
-Please test it before using in production !!
+![](/src/Lab.png)
 
 
 ### Installation:
@@ -26,13 +26,11 @@ Please test it before using in production !!
 
 ### Create multiple Notebook users (Spawners)
 
-`docker exec -it tutor_local_jupyter_1 bash`
+Login as a teacher(password: soloadmin) => clik to Control Panel then => Admin
 
-`adduser <username>`
+![](/src/adminPanel.jpg)
 
-![](/src/addUser.png)
-
-You can create multiple user with same Unix command
+Here you can add multiple user which is pre installed via the Dockerfile (https://github.com/murat-polat/tutor-contrib-jupyter/blob/master/tutorjupyter/templates/jupyter/build/jupyter/Dockerfile).. By default can be added 100 users(edx0,edx1, edx2..... edx100), which can be populated in user_list.txt file ()
 
 
 

@@ -11,3 +11,7 @@ jupyterlab-geojson
 jupyterlab-fasta
 jupyter-videochat
 jupyter_bokeh
+there
+jupyterhub-dummyauthenticator
+jupyterlab-link-share
+ipyelk
