@@ -44,8 +44,8 @@ For courses " Student " is common user, but all users can use their own server, 
 Login which user do you want, give name to your VideoChat rom, then click to "JOIN" button.
 ![](/src/jitsi.png)
 
-Ask to other paticipands to join your meeting. Link will be same lab, and same rom.
-(e.g https:jupyter.yourdomain/user/edx1/lab) login Join the same rom(TestRom)
+Ask to other paticipants to join your meeting. Link will be same lab, and same rom.
+(e.g https://jupyter.yourdomain/user/edx1/lab) login Join the same rom(TestRom)
 
 ![](/src/jitsi2.png)
 
