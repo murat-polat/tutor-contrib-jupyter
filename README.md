@@ -30,7 +30,18 @@ Login as a teacher(password: soloadmin) => clik to Control Panel then => Admin
 
 ![](/src/adminPanel.jpg)
 
-Here you can add multiple user which is pre installed via the Dockerfile (https://github.com/murat-polat/tutor-contrib-jupyter/blob/master/tutorjupyter/templates/jupyter/build/jupyter/Dockerfile).. By default can be added 100 users(edx0,edx1, edx2..... edx100), which can be populated in user_list.txt file ()
+Here you can add multiple user which is pre installed via the Dockerfile (https://github.com/murat-polat/tutor-contrib-jupyter/blob/master/tutorjupyter/templates/jupyter/build/jupyter/Dockerfile).. By default can be added 100 users(edx0,edx1, edx2..... edx100), which can be populated in user_list.txt file (https://github.com/murat-polat/tutor-contrib-jupyter/blob/master/tutorjupyter/templates/jupyter/build/jupyter/user_list.txt)
+
+Exampel: 
+We want to add 10 new JupyterLab users. To do that click to => Add Users button, usernames sparated bylines, than => Add Users. 
+
+![](/src/add_users.png)
+now you have 10 newuser. Username and password is same (e.g. Username: edx10, Password: edx10) here teacher can access all users notebook or other files.
+
+For courses " Student " is common user, but all users can use their own server, doesn't matter. Teacher should be uses for user administrations. Because basic user can not see or edit admin(teacher) files :)
+
+### Video chat with Jitsi (WebRTC):
+
 
 
 
