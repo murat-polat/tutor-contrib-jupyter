@@ -6,7 +6,7 @@ Installation
 
 ::
 
-    pip install git+https://github.com/myusername/tutor-contrib-jupyter
+    pip install git+https://github.com/murat-polat/tutor-contrib-jupyter
 
 Usage
 -----

@@ -1,6 +1,6 @@
 ## Jupyterhub plugin for Tutor Open edX 
 
-- Jupyterhub runs as a subdomain of Tutor
+- Jupyterhub and JupyterLab runs as a subdomain of Tutor
 - Comes with Pandas, Bokeh, Numpy and other popular libraries.
 - Allow to create multiple users, which has own kernel
 
@@ -19,7 +19,10 @@
 
 `tutor config save`
 
-`tutor images build jupyter`
+Rebuild your edX platform with plugin and Jupyterhub-XBlock
+
+
+`tutor images build openedx`
 
 `tutor local quickstart`
 
@@ -33,7 +36,7 @@ Login as a teacher(password: soloadmin) => clik to Control Panel then => Admin
 Here you can add multiple user which is pre installed via the Dockerfile (https://github.com/murat-polat/tutor-contrib-jupyter/blob/master/tutorjupyter/templates/jupyter/build/jupyter/Dockerfile).. By default can be added 100 users(edx0,edx1, edx2..... edx100), which can be populated in user_list.txt file (https://github.com/murat-polat/tutor-contrib-jupyter/blob/master/tutorjupyter/templates/jupyter/build/jupyter/user_list.txt)
 
 Exampel: 
-We want to add 10 new JupyterLab users. To do that, click to => Add Users button, usernames sparated bylines, then => Add Users. 
+We want to add 10 new JupyterLab users. To do that, click to => Add Users button, usernames sparated by lines, then => Add Users. 
 
 ![](/src/add_users.png)
 now you have 10 newuser. Username and password is same (e.g. Username: edx10, Password: edx10) here teacher can access all users notebook or other their files.
@@ -48,7 +51,6 @@ Ask to other paticipants to join your meeting. Link will be same lab, and same r
 (e.g https://jupyter.yourdomain/user/edx1/lab) login Join the same rom(TestRom)
 
 ![](/src/jitsi2.png)
-
 
 
 

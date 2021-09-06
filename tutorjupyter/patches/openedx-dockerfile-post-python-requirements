@@ -1,0 +1,1 @@
+RUN pip3 install git+https://github.com/murat-polat/jupyterhub-xblock.git@main

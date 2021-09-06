@@ -27,10 +27,10 @@ ABOUT = load_about()
 setup(
     name="tutor-contrib-jupyter",
     version=ABOUT["__version__"],
-    url="https://github.com/myusername/tutor-contrib-jupyter",
+    url="https://github.com/murat-polat/tutor-contrib-jupyter",
     project_urls={
-        "Code": "https://github.com/myusername/tutor-contrib-jupyter",
-        "Issue tracker": "https://github.com/myusername/tutor-contrib-jupyter/issues",
+        "Code": "https://github.com/murat-polat/tutor-contrib-jupyter",
+        "Issue tracker": "https://github.com/murat-polat/tutor-contrib-jupyter/issues",
     },
     license="AGPLv3",
     author="MP",
