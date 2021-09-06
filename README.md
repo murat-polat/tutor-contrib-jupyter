@@ -4,8 +4,6 @@
 - Comes with Pandas, Bokeh, Numpy and other popular libraries.
 - Allow to create multiple users, which has own kernel
 
-![](/src/Lab.png)
-
 
 ### Installation:
 
@@ -85,7 +83,5 @@ Now you can write your entire course with Jupyter tools :)
 
 ![](/src/XblockOverview.jpg)
 
-Students can change, edit, share, rename common users notebooks, or their own notebooks. For courses " Student " is common user, but all users can use their own server, doesn't matter. Teacher should be uses for user administrations. Because basic user can not see or edit admin(teacher) files :)
-
-
+https://github.com/murat-polat/jupyterhub-xblock
 
