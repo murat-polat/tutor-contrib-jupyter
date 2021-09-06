@@ -57,8 +57,35 @@ Ask to other paticipants to join your meeting. Link will be same lab, and same r
 
 ### Open edX Studio integration:
 
-To integrate JupyterHub plugin to the Open edX Studio, please install this XBlock( https://github.com/murat-polat/jupyterhub-xblock )
+Jupyterhub XBlock comes with to main users " student (password: solo) " and " teacher (password: soloadmin) ". You can change password and create mulitable users and administrators, which will be explained soon.
+
+- login to studio as a staff or superuser
+- Create a course, than settings=>advanced settings=> Advanced Module List add  `"jupyterhub"` and save
+
+![](/src/advanced_module.jpg)
+- Now you can use JupyterHub as a Unit, for every type of course. But first, you need to edit your JupyterHub (Name, ButtonText, JupyterHub URL, JupyterNotebook URL(you will create this later) and JupyterLab URL )
+
+![](/src/edit_studio.jpg)
+
+- You need to create a notebook for students view in your course. To do that click  " `Start JupyterHub in new tab`" login as " student " password is "solo". Then New => Python3(ipykernel). dobbel click to "Untitled" and rename it whatever you want.
+
+### JupyterLab:
+
+JupyterLab is next-generations, great advanced tools for everyone. Not just a notebook,that comes with text editor, console, terminal, Jitsi-Meet and much more. For more information please visit https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
+
+To start JupyterLab just click the " Start JupyterLab in new tab " Now all lab ready for every Hub users.
 
 
- [![](/src/youtube.jpg)](https://www.youtube.com/watch?v=f-tsGIxYq7c)
+Now you can write your entire course with Jupyter tools :)
+
+![](/src/Lab.png)
+
+ Copy the URL of your notebook and paste in " Edit=> JupyterHub or Lab URL" save and refresh your page. Now your notebook is ready to publish.
+
+
+![](/src/XblockOverview.jpg)
+
+Students can change, edit, share, rename common users notebooks, or their own notebooks. For courses " Student " is common user, but all users can use their own server, doesn't matter. Teacher should be uses for user administrations. Because basic user can not see or edit admin(teacher) files :)
+
+
 
