@@ -1,0 +1,15 @@
+############# Jupyter
+
+jupyter-job:
+  image: {{ DOCKER_REGISTRY }}{{ JUPYTER_DOCKER_IMAGE }}
+ 
+  environment:      
+      SETTINGS: ${EDX_PLATFORM_SETTINGS:-tutor.production}
+  command: ['jupyterhub']
+  ports:
+    - 8000:8000    
+
+
+  restart: unless-stopped
+  depends_on:
+    - lms
