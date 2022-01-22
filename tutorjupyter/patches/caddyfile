@@ -1,4 +1,8 @@
 # Jupyter
-{{ JUPYTER_HOST }}{% if not ENABLE_HTTPS %}:80{% endif %} {
-    reverse_proxy nginx:80
+
+{{ JUPYTER_HOST }}{$default_site_port} {
+    request_body {
+        max_size 10MB
+    }
+    import proxy "jupyter:8000"
 }
