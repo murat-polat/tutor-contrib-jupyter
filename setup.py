@@ -39,7 +39,7 @@ setup(
     packages=find_packages(exclude=["tests*"]),
     include_package_data=True,
     python_requires=">=3.5",
-    install_requires=["tutor>=12, <=14"],
+    install_requires=["tutor>=13, <=15"],
     entry_points={
         "tutor.plugin.v0": [
             "jupyter = tutorjupyter.plugin"
