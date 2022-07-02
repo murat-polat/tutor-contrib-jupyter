@@ -3,7 +3,10 @@
 - Jupyterhub and JupyterLab runs as a subdomain of Tutor
 - Comes with Pandas, Bokeh, Numpy and other popular libraries.
 - Allow to create multiple users, which has own kernel
-
+ 
+ First of all, add an A record with name "jupyter" to your DNS management. Because your JupyterHUB server will be served as a subdomain of your platform.
+ For example, if your LMS/Domain is https://myopenedx.com, so JupyterHUB server will be https://jupyter.myopenedx.com 
+ 
 
 ### Installation:
 
